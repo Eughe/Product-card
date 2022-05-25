@@ -13,10 +13,13 @@ html {
 
 body{
     font-family: "Roboto Condensed", sans-serif;
-    /* font-size: 22px; */
     font-size: calc(16px + 6*(100vw/920));
     line-height: 28px;
     color: #555;
+    background-color: rgb(231, 230, 230);
+}
+
+p {margin: 1em 0;
 }
 
 .page{
@@ -29,6 +32,28 @@ body{
     margin: 0 auto;
 }
 
+.pageWrapper .card{
+    outline: rgb(41, 40, 40) solid 1px;
+}
+
+.page .card .text .btn{
+    display: block;
+    text-align: center;
+    text-decoration: none;
+    background-color: coral;
+    color: rgb(253, 253, 253);
+    border-radius: 6px;
+    margin: auto;
+    padding: 5px;
+    max-width: 180px;
+    overflow: hidden;
+}
+
+.page .card .text .btn:active{
+border: 2px double crimson;
+}
+
+
 .page1 .card,
 .page2 .card,
 .page3 .card{
@@ -37,9 +62,10 @@ body{
     left: 50%;
     top: 50%;
     transform: translate(-50%, -50%);
+    }
+
     
-}
-/* ---------------------------- inline */
+
 .page1 .card .foto,
 .page1 .card .text{
     width: 50%;
@@ -48,10 +74,6 @@ body{
     padding: 25px;
 }
 
-.page1 .card .text a{
-    display: block;
-    text-align: center;
-}
 
 .page1 .card .foto img{
     width: 100%;
@@ -63,40 +85,51 @@ body{
     transform: scale(1.1);
 }
 
-/* ------------------------------- inline end */
-/* ---------------------------------- table */
+
+
 .page2 .card .foto,
 .page2 .card .text{
     width: 50%;
     padding: 25px;
 }
 
-.page2 .card .fotoSmalScrine{
+.page2 .card .fotoSmall{
     padding: 25px;
     display: none;
 }
 .page2 .card .foto img,
-.page2 .card .fotoSmalScrine img{
+.page2 .card .fotoSmall img{
     width: 100%;
     object-fit: cover;
     transition: .5s;
 }
 
 .page2 .card .foto img:hover,
-.page2 .card .fotoSmalScrine img:hover{
+.page2 .card .fotoSmall img:hover{
     transform: scale(1.1);
 }
 
-.page2 .card .text a{
+.page2 .card .text .btn{
     display: block;
     text-align: center;
+    text-decoration: none;
+    background-color: coral;
+    color: rgb(253, 253, 253);
+    border-radius: 6px;
+    margin: auto;
+    padding: 5px;
+    max-width: 180px;
+    overflow: hidden;
 }
 
-/* ---------------------------------- float */
+.page2 .card .text .btn:active{
+border: 2px double crimson;
+}
+
+
+
 .page3 .card .foto,
 .page3 .card .text{
-    /* width: 50%; */
-    /* float: left; */
     vertical-align: top;
     padding: 25px;
 }
@@ -106,10 +139,7 @@ body{
     width: 50%;
 }
 
-.page3 .card .text a{
-    display: block;
-    text-align: center;
-}
+
 
 .page3 .card .foto img{
     width: 100%;
@@ -137,30 +167,27 @@ body{
 }
 
 .page4 .pageWrapper .card{
-    outline: red solid 1px;
     display: flex;
 }
 
 .page4 .pageWrapper .card .text{
-    padding: 15px;
     display: flex;
     flex-direction: column;
-    justify-content: space-between;
+    justify-content: space-evenly;
+    color: red;
     
 }
 
-.page4 .pageWrapper .card .text .btn{
-    display: flex;
-   justify-content: space-around;
+.page4 .card .text .btn{
+    margin: inherit;
 }
 
-/* ----------------------- адаптив */
+
+
+
 
 @media (max-width:550px) {
-/* body{
-    font-size: 16px;
-    line-height: 20px;
-} */
+
     .page1 .card .foto,
     .page1 .card .text{
         width: 100%;
@@ -170,7 +197,7 @@ body{
         display: none;
     }
 
-    .page2 .card .fotoSmalScrine{
+    .page2 .card .fotoSmall{
         display: block;
     }
     .page2 .card .text{
