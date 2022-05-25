@@ -27,7 +27,15 @@
 
 .icon-cart-plus:after {
   content: "\e900";
+  position: absolute;
+  opacity: 0;
+  transition: 0.5s;
 }
+
+.icon-cart-plus:hover:after {
+  opacity: 1;
+}
+
 .icon-phone:after {
   content: "\e901";
 }
